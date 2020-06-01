@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Draw some basic shapes</title>
+    <link rel="stylesheet" href="shape.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>how to create basic shapes with CSS</h1>
+        <p>My CSS Learning Notes</p>
+    </header>
+    <ul class="shape-list clearfix">
+        <li class="triangle-guide col">
+            <h2>Triangle</h2>
+            <div class=col-content>
+                <p>It's easy to create a triangular shape using border property of the box. First,
+                    let's look at how the borders are composed of when the hight and the width
+                    of a div block are both set to zero:
+                </p>
+                <div class="container clearfix">
+                    <div class="four-triangle graph"></div>
+                    <p class="code">
+                        .four-borders&nbsp;{<br>
+                        height: 0;<br>
+                        width: 0;<br>
+                        border: 80px solid;<br>
+                        border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);<br>
+                        }
+                    </p>
+                </div>
+
+                <p>Hence, if we set its left and right borders to transparent, and removes the top border, there's only one visible
+                    triangle left:
+                </p>
+                <div class="container clearfix">
+                    <div class="triangle graph"></div>
+                    <p class="code">
+                        .triangle&nbsp;{<br>
+                        height: 0;<br>
+                        width: 0;<br>
+                        border-bottom: 80px solid rgb(231, 203, 231);<br>
+                        border-left: 80px solid transparent;<br>
+                        border-right: 80px solid transparent;<br>
+                        }
+                    </p>
+                </div>
+                <p>And this triangle can be easily rotated using the transform property. For example, let's rotate
+                    it by 45 degrees clockwise.
+                </p>
+                <div class="triangle rotate"></div>
+
+            </div>
+        </li>
+        <li class="col">
+            <h2>Circle and Oval</h2>
+            <div class="col-content">
+                <p>You can always get a perfect circle with border-radius set to 50%!</p>
+                <div class="container clearfix">
+                    <div class="circle graph"></div>
+                    <p class="code">.circle&nbsp;{
+                        <br>height: 15rem;
+                        <br>width: 15rem;
+                        <br>background-color: #cfb3cf;
+                        <br>border-radius: 50%;
+                        <br>}
+                    </p>
+                </div>
+                <p>And if we chage the width and the height of the div block, an oval can be successfully
+                    displayed.
+                </p>
+                <div class="container clearfix">
+                    <div class="oval graph"></div>
+                    <p class="code">
+                        .oval {<br>
+                        height: 24rem;<br>
+                        width: 12rem;<br>
+                        background-color: #f0daf0;<br>
+                        border-radius: 50%;<br>
+                        }
+                    </p>
+                </div>
+            </div>
+
+        </li>
+        <li class="col">
+            <h2></h2>
+        </li>
+        <li class="col">
+            <h2></h2>
+        </li>
+    </ul>
+
+    <footer>
+        <p>&copy;Yanhan</p>
+    </footer>
+
+</body>
+
+</html>
