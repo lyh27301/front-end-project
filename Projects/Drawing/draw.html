@@ -7,52 +7,44 @@
 </head>
 
 <body>
+    <!-- Main Header -->
     <header class="main-header">
         <h1>how to create basic shapes with CSS</h1>
         <p>My CSS Learning Notes</p>
     </header>
+
+    <!-- Columns of Shapes -->
     <ul class="shape-list clearfix">
+
+        <!-- Triangle -->
         <li class="triangle-guide col">
             <h2>Triangle</h2>
             <div class=col-content>
-                <p>It's easy to create a triangular shape using border property of the box. First,
-                    let's look at how the borders are composed of when the hight and the width
-                    of a div block are both set to zero:
+                <p>It's easy to create a triangular shape using border property of the box. First, let's look at how the borders are composed of when the hight and the width of a div block are both set to zero:
                 </p>
                 <div class="container clearfix">
                     <div class="four-triangle graph"></div>
                     <p class="code">
-                        .four-borders&nbsp;{<br>
-                        height: 0;<br>
-                        width: 0;<br>
-                        border: 80px solid;<br>
-                        border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);<br>
-                        }
+                        .four-borders&nbsp;{<br> height: 0;<br> width: 0;<br> border: 80px solid;<br> border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);<br> }
                     </p>
                 </div>
 
-                <p>Hence, if we set its left and right borders to transparent, and removes the top border, there's only one visible
-                    triangle left:
+                <p>Hence, if we set its left and right borders to transparent, and removes the top border, there's only one visible triangle left:
                 </p>
                 <div class="container clearfix">
                     <div class="triangle graph"></div>
                     <p class="code">
-                        .triangle&nbsp;{<br>
-                        height: 0;<br>
-                        width: 0;<br>
-                        border-bottom: 80px solid rgb(231, 203, 231);<br>
-                        border-left: 80px solid transparent;<br>
-                        border-right: 80px solid transparent;<br>
-                        }
+                        .triangle&nbsp;{<br> height: 0;<br> width: 0;<br> border-bottom: 80px solid rgb(231, 203, 231);<br> border-left: 80px solid transparent;<br> border-right: 80px solid transparent;<br> }
                     </p>
                 </div>
-                <p>And this triangle can be easily rotated using the transform property. For example, let's rotate
-                    it by 45 degrees clockwise.
+                <p>And this triangle can be easily rotated using the transform property. For example, let's rotate it by 45 degrees clockwise.
                 </p>
                 <div class="triangle rotate"></div>
 
             </div>
         </li>
+
+        <!-- Circle and Oval -->
         <li class="col">
             <h2>Circle and Oval</h2>
             <div class="col-content">
@@ -67,28 +59,43 @@
                         <br>}
                     </p>
                 </div>
-                <p>And if we chage the width and the height of the div block, an oval can be successfully
-                    displayed.
+                <p>And if we chage the width and the height of the div block, an oval can be successfully displayed.
                 </p>
                 <div class="container clearfix">
                     <div class="oval graph"></div>
                     <p class="code">
-                        .oval {<br>
-                        height: 24rem;<br>
-                        width: 12rem;<br>
-                        background-color: #f0daf0;<br>
-                        border-radius: 50%;<br>
-                        }
+                        .oval {<br> height: 24rem;<br> width: 12rem;<br> background-color: #f0daf0;<br> border-radius: 50%;<br> }
+                    </p>
+                </div>
+            </div>
+        </li>
+
+        <!-- Six-Point Star -->
+        <li class="col">
+            <h2>Six-Point Star</h2>
+            <div class="col-content">
+                <p>
+                    Six Point Star is composed of 2 triangles as is shown in the previous section. We simply create 2 triangles: one points upward and the other one points downward.
+                </p>
+                <div class="container clearfix">
+                    <div class="star-six graph"></div>
+                    <p class="code">
+                        .star-six {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;<br> border-right: 60px solid transparent;<br> border-bottom: 100px solid #d096eb;<br> }
+                        <br> .star-six::after {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;<br> border-right: 60px solid transparent;<br> border-top: 100px solid #d096eb;<br> position: absolute;<br> content: "";<br> top: 30px;<br>                        left: -70px;<br> }
                     </p>
                 </div>
             </div>
 
+
         </li>
+
+        <!-- Five-Point Star -->
         <li class="col">
             <h2></h2>
-        </li>
-        <li class="col">
-            <h2></h2>
+            <div class="col-content">
+                c
+            </div>
+
         </li>
     </ul>
 

@@ -28,45 +28,41 @@ html {
 * {
     box-sizing: border-box;
     /* center all elements: inline-element; block-element */
-    text-align: center; 
+    text-align: center;
     margin: 0 auto;
 }
 
 body {
     color: white;
-    background:
-    linear-gradient( rgba(255, 254, 255, 0.8), rgba(255, 254, 255, 1)),
-    url(img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center / cover;
-
-    font-family: 'Cormorant_Garamond',Arial,Helvetica,san-serif;
+    background: linear-gradient( rgba(255, 254, 255, 0.8), rgba(255, 254, 255, 1)), url(img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center / cover;
+    font-family: 'Cormorant_Garamond', Arial, Helvetica, san-serif;
 }
-
-
 
 ul {
     list-style-type: none;
     padding: 0 2%;
 }
 
+
 /* paragraphs */
+
 p {
     font-size: 2rem;
     color: inherit;
     margin: .75em 0;
 }
 
-p + div {
+p+div {
     margin: 30px auto;
 }
 
-.col-content p
- {
-    color: #6e556e;    
+.col-content p {
+    color: #6e556e;
     text-align: start;
 }
 
 .col-content .code {
-    color: #c39bd4b6;    
+    color: #c39bd4b6;
     text-align: start;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
@@ -74,7 +70,9 @@ p + div {
     line-height: 1.75em;
 }
 
+
 /* headings */
+
 h1 {
     text-transform: uppercase;
     color: white;
@@ -93,7 +91,7 @@ h2 {
     text-transform: none;
 }
 
-.col h2{
+.col h2 {
     height: 5rem;
 }
 
@@ -101,29 +99,32 @@ h2 {
     color: white;
     padding: 20px 10%;
     letter-spacing: 1.5px;
-    background:
-    linear-gradient( rgba(216, 191, 216, 0.78), rgba(216, 191, 216, 0.78)),
-    url(img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center;
+    background: linear-gradient( rgba(216, 191, 216, 0.78), rgba(216, 191, 216, 0.78)), url(img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center;
 }
 
-.main-header p{
+.main-header p {
     font-style: italic;
 }
 
+
 /* columns of different shapes */
+
 .col {
     border: 3px solid #efe5ef;
     margin: 10px auto;
     height: auto;
     padding: 0;
 }
-.col-content{
+
+.col-content {
     padding: 15px 8%;
     height: auto;
     margin-bottom: 3rem;
 }
 
+
 /* triangle */
+
 .triangle {
     height: 0;
     width: 0;
@@ -132,30 +133,60 @@ h2 {
     border-left: 80px solid transparent;
     border-right: 80px solid transparent;
 }
+
 .four-triangle {
     border: 80px solid;
     border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);
 }
+
 .rotate {
-        transform: rotate(45deg); 
+    transform: rotate(45deg);
 }
 
 .graph {
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 }
 
+
 /* Circle & Oval */
+
 .circle {
     height: 15rem;
     width: 15rem;
     background-color: #cfb3cf;
     border-radius: 50%;
 }
+
 .oval {
     height: 24rem;
     width: 12rem;
     background-color: #f0daf0;
     border-radius: 50%;
+}
+
+
+/* 6 point star */
+
+.star-six {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid #d096eb;
+    position: relative;
+}
+
+.star-six::after {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 100px solid #d096eb;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -70px;
+    position: absolute;
 }
 
 footer {
@@ -164,7 +195,6 @@ footer {
     padding: 10px 5%;
 }
 
-
 @media (min-width: 764px) {
     .col {
         float: left;
@@ -172,32 +202,25 @@ footer {
         width: 48%;
         margin-right: 2%;
     }
-
     .col:last-child {
         margin-right: 0;
     }
-
     .col-content {
         height: 60rem;
         overflow: scroll;
     }
-
     .graph {
         float: left;
         margin-bottom: 10px;
     }
-
     .code {
         float: left;
         margin-left: 30px;
         width: 40%;
     }
-
     .clearfix::after {
         content: " ";
         display: table;
         clear: both;
     }
 }
-
-
