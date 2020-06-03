@@ -221,11 +221,16 @@ button {
 
 .heart {
     margin-top: 30px;
-    margin-right: 135px;
     margin-bottom: 80px;
     position: relative;
     width: 100px;
     height: 90px;
+}
+
+#heart-container {
+    text-align: center;
+    margin: 0 auto;
+    padding-right: 12%;
 }
 
 .heart::before,
@@ -330,5 +335,11 @@ footer p:last-child {
     .code {
         float: right;
         margin-right: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+    #heart-container {
+        padding-right: 25%;
     }
 }
