@@ -285,7 +285,7 @@ footer p:last-child {
     padding-bottom: 20px;
 }
 
-@media (min-width: 764px) {
+@media (min-width: 769px) {
     .heart-parted::before,
     .heart-parted::after {
         left: 84px;
