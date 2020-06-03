@@ -34,7 +34,7 @@ html {
 
 body {
     color: white;
-    background: linear-gradient( rgba(255, 254, 255, 0.8), rgba(255, 254, 255, 1)), url(../img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center / cover;
+    background: linear-gradient( rgba(255, 254, 255, 0.95), rgba(255, 254, 255, .99)), url(../img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center / cover;
     font-family: 'Cormorant_Garamond', Arial, Helvetica, san-serif;
 }
 
@@ -72,7 +72,6 @@ p+div {
     height: 180px;
     padding: 5%;
     overflow: scroll;
-    background-color: rgba(216, 191, 216, 0.18);
     border-radius: 5%;
 }
 
