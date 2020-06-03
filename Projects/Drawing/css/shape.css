@@ -268,9 +268,13 @@ button {
 }
 
 footer {
-    height: 5rem;
+    height: 6rem;
     background-color: thistle;
     padding: 10px 5%;
+}
+
+footer p:last-child {
+    padding-bottom: 20px;
 }
 
 @media (min-width: 764px) {
