@@ -105,14 +105,18 @@ h2 {
     height: 5rem;
 }
 
-.main-header {
+#main-header {
     color: white;
-    padding: 20px 10%;
     letter-spacing: 1.5px;
     background: linear-gradient( rgba(216, 191, 216, 0.78), rgba(216, 191, 216, 0.78)), url(../img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center;
 }
 
-.main-header p {
+#main-header-container {
+    max-width: 80%;
+    padding: 40px 0;
+}
+
+#main-header p {
     font-style: italic;
 }
 
@@ -390,5 +394,15 @@ footer {
     #main-nav a {
         font-size: 2rem;
         width: 100%;
+    }
+    #main-header-container {
+        padding: 25px 0;
+    }
+    #main-header h1 {
+        font-size: 2.8rem;
+        line-height: normal;
+    }
+    #main-header p {
+        font-size: 1.8rem;
     }
 }
