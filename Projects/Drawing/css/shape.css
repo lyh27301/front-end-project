@@ -56,6 +56,11 @@ p+div {
     margin: 30px auto;
 }
 
+.col-content {
+    max-width: 90%;
+    overflow: hidden;
+}
+
 .col-content p {
     color: #6e556e;
     text-align: start;
