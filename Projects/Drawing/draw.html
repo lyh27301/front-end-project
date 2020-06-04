@@ -7,153 +7,180 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Draw some basic shapes</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/shape.css">
+
 </head>
 
 <body>
-    <!-- Main Header -->
-    <header class="main-header">
-        <h1>how to create basic shapes with CSS</h1>
-        <p>My CSS Learning Notes</p>
-    </header>
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <h1>how to create basic shapes with CSS</h1>
+            <p>My CSS Learning Notes</p>
+        </header>
 
-    <!-- Columns of Shapes -->
-    <ul class="shape-list clearfix">
+        <!-- Naviagation bar -->
+        <nav id="main-nav" class="clearfix">
+            <a href="#triangle-guide">Triangle</a>
+            <a href="#circle-oval-guide">Circle and Oval</a>
+            <a href="#star-guide">Six-point Star</a>
+            <a href="#heart-guide">Heart</a>
+        </nav>
 
-        <!-- Triangle -->
-        <li class="triangle-guide col">
-            <h2>Triangle</h2>
-            <div class=col-content>
-                <p>It's easy to create a triangular shape using border property of the box. First, let's look at how the borders are composed of when the hight and the width of a div block are both set to zero:
-                </p>
-                <!-- 4 triangles -->
-                <div class="container clearfix">
-                    <div class="four-triangle triangle graph"></div>
-                    <div class="code">
-                        <p>
-                            <span class="class">.four-borders</span>&nbsp;{<br> height: 0;<br> width: 0;<br> border: 80px solid;<br> border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);<br> }
+        <div class="content">
+            <!-- Columns of Shapes -->
+            <ul class="shape-list clearfix">
+
+                <!-- Triangle -->
+                <li class="col" id="triangle-guide">
+                    <h2>Triangle</h2>
+                    <div class="col-content">
+                        <p>It's easy to create a triangular shape using border property of the box. First, let's look at how the borders are composed of when the hight and the width of a div block are both set to zero:
                         </p>
-                    </div>
-                </div>
+                        <!-- 4 triangles -->
+                        <div class="container clearfix">
+                            <div class="four-triangle triangle graph"></div>
+                            <div class="code">
+                                <p>
+                                    <span class="class">.four-borders</span>&nbsp;{<br> height: 0;<br> width: 0;<br> border: 80px solid;<br> border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);<br> }
+                                </p>
+                            </div>
+                        </div>
 
-                <p>Hence, if we set its left and right borders to transparent, and removes the top border, there's only one visible triangle left:
-                </p>
-                <!-- a single triangle -->
-                <div class="container clearfix">
-                    <div class="triangle graph"></div>
-                    <div class="code">
-                        <p>
-                            <span class="class">.triangle</span>&nbsp;{<br> height: 0;<br> width: 0;<br> border-bottom: 80px solid rgb(231, 203, 231);
-                            <br> border-left: 80px solid transparent;<br> border-right: 80px solid transparent;<br> }
+                        <p>Hence, if we set its left and right borders to transparent, and removes the top border, there's only one visible triangle left:
                         </p>
-                    </div>
-                </div>
-                <p>And this triangle can be easily rotated using the transform property. For example, let's rotate it by 45 degrees clockwise.
-                </p>
-                <div class="triangle rotate"></div>
+                        <!-- a single triangle -->
+                        <div class="container clearfix">
+                            <div class="triangle graph"></div>
+                            <div class="code">
+                                <p>
+                                    <span class="class">.triangle</span>&nbsp;{<br> height: 0;<br> width: 0;<br> border-bottom: 80px solid rgb(231, 203, 231);
+                                    <br> border-left: 80px solid transparent;<br> border-right: 80px solid transparent;
+                                    <br> }
+                                </p>
+                            </div>
+                        </div>
+                        <p>And this triangle can be easily rotated using the transform property. For example, let's rotate it by 45 degrees clockwise.
+                        </p>
+                        <div class="triangle rotate"></div>
 
+                    </div>
+                </li>
+
+                <!-- Circle and Oval -->
+                <li class="col" id="circle-oval-guide">
+                    <h2>Circle and Oval</h2>
+                    <div class="col-content">
+                        <!-- circle -->
+                        <p>You can always get a perfect circle with border-radius set to 50%!</p>
+                        <div class="container clearfix">
+                            <div class="circle graph"></div>
+                            <div class="code">
+                                <p><span class="class">.circle</span>&nbsp;{
+                                    <br>height: 15rem;
+                                    <br>width: 15rem;
+                                    <br>background-color: #cfb3cf;
+                                    <br>border-radius: 50%;
+                                    <br>}
+                                </p>
+                            </div>
+                        </div>
+                        <p>And if we chage the width and the height of the div block, an oval can be successfully displayed.
+                        </p>
+                        <!-- oval -->
+                        <div class="container clearfix">
+                            <div class="oval graph"></div>
+                            <div class="code" style="height: 24rem;">
+                                <p>
+                                    <span class="class">.oval</span> {<br> height: 24rem;<br> width: 12rem;<br> background-color: #f0daf0;<br> border-radius: 50%;
+                                    <br> }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Six-Point Star -->
+                <li class="col" id="star-guide">
+                    <h2>Six Point Star</h2>
+                    <div class="col-content">
+                        <p>
+                            Six Point Star is composed of 2 triangles as is shown in the previous section. We simply create 2 triangles: one points upward and the other one points downward.
+                        </p>
+                        <!-- star -->
+                        <div class="container clearfix">
+                            <div class="star-six graph"></div>
+                            <div class="code">
+                                <p>
+                                    <span class="class">.star-six</span> {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;<br> border-right: 60px solid transparent;<br> border-bottom: 100px solid #e1d5f1;
+                                    <br> }
+                                    <br> <span class="class">.star-six::after</span> {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;
+                                    <br> border-right: 60px solid transparent;<br> border-top: 100px solid #e1d5f1;<br> position: absolute;
+                                    <br> content: "";<br> top: 30px;<br> left: -60px;<br> }
+                                </p>
+                            </div>
+                        </div>
+                        <!-- steps -->
+                        <p>The first part of code creates the triangle pointing upward. Click the button below to see it.
+                        </p>
+                        <button id="b1">click</button>
+                        <p>the triangle remaining its original color is the one created by the ::after pseudo-element.
+                        </p>
+                        <p> When you finished, click the reconvert button to recover.</p>
+                        <button id="b2">reconvert</button>
+
+                    </div>
+
+
+                </li>
+
+                <!-- Heart -->
+                <li class="col" id="heart-guide">
+                    <h2>Heart</h2>
+                    <div class="col-content">
+                        <p>
+                            The heart shape is combined with two converted rectangles. One side of these rectangles are made rouded with the border-radius property.
+                        </p>
+                        <!-- heart -->
+                        <div class="container clearfix">
+                            <div id="heart-container">
+                                <div class="heart graph"></div>
+                            </div>
+                            <div class="code">
+                                <p>
+                                    <span class="class">.heart</span> {<br> margin-top: 30px;<br> position: relative;
+                                    <br> width: 100px;
+                                    <br> height: 90px;<br> }
+                                    <br>
+                                    <br> <span class="class">.heart::before,
+                                        <br> .heart::after</span> {<br> position: absolute;<br> content: "";<br> left: 84px;
+                                    <br> top: 0;<br> width: 85px;<br> height: 125px;<br> background: rgb(243, 159, 204);
+                                    <br> border-radius: 50px 50px 0 0;<br> transform: rotate(-45deg);<br> transform-origin: 0 100%;
+                                    <br> } <br><br><span class="class">.heart:after</span> {<br> left: 0;<br> transform: rotate(45deg);
+                                    <br> transform-origin: 100% 100%;<br> }
+
+                                </p>
+                            </div>
+                        </div>
+                        <p>Before these two converted rectangles are put together properly, the shape looks like this:
+                        </p>
+                        <div class="heart-parted graph"></div>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <footer>
+            <div id="footer-container">
+                <p>&copy;Yanhan</p>
             </div>
-        </li>
 
-        <!-- Circle and Oval -->
-        <li class="col">
-            <h2>Circle and Oval</h2>
-            <div class="col-content">
-                <!-- circle -->
-                <p>You can always get a perfect circle with border-radius set to 50%!</p>
-                <div class="container clearfix">
-                    <div class="circle graph"></div>
-                    <div class="code">
-                        <p><span class="class">.circle</span>&nbsp;{
-                            <br>height: 15rem;
-                            <br>width: 15rem;
-                            <br>background-color: #cfb3cf;
-                            <br>border-radius: 50%;
-                            <br>}
-                        </p>
-                    </div>
-                </div>
-                <p>And if we chage the width and the height of the div block, an oval can be successfully displayed.
-                </p>
-                <!-- oval -->
-                <div class="container clearfix">
-                    <div class="oval graph"></div>
-                    <div class="code" style="height: 24rem;">
-                        <p>
-                            <span class="class">.oval</span> {<br> height: 24rem;<br> width: 12rem;<br> background-color: #f0daf0;<br> border-radius: 50%;
-                            <br> }
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </li>
-
-        <!-- Six-Point Star -->
-        <li class="col">
-            <h2>Six Point Star</h2>
-            <div class="col-content">
-                <p>
-                    Six Point Star is composed of 2 triangles as is shown in the previous section. We simply create 2 triangles: one points upward and the other one points downward.
-                </p>
-                <!-- star -->
-                <div class="container clearfix">
-                    <div class="star-six graph"></div>
-                    <div class="code">
-                        <p>
-                            <span class="class">.star-six</span> {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;<br> border-right: 60px solid transparent;<br> border-bottom: 100px solid #e1d5f1;<br> }
-                            <br> <span class="class">.star-six::after</span> {<br> width: 0;<br> height: 0;<br> border-left: 60px solid transparent;
-                            <br> border-right: 60px solid transparent;<br> border-top: 100px solid #e1d5f1;<br> position: absolute;
-                            <br> content: "";<br> top: 30px;<br> left: -60px;<br> }
-                        </p>
-                    </div>
-                </div>
-                <!-- steps -->
-                <p>The first part of code creates the triangle pointing upward. Click the button below to see it.</p>
-                <button id="b1">click</button>
-                <p>the triangle remaining its original color is the one created by the ::after pseudo-element.</p>
-                <p> When you finished, click the reconvert button to recover.</p>
-                <button id="b2">reconvert</button>
-
-            </div>
-
-
-        </li>
-
-        <!-- Heart -->
-        <li class="col">
-            <h2>Heart</h2>
-            <div class="col-content">
-                <p>
-                    The heart shape is combined with two converted rectangles. One side of these rectangles are made rouded with the border-radius property.
-                </p>
-                <!-- heart -->
-                <div class="container clearfix">
-                    <div id="heart-container">
-                        <div class="heart graph"></div>
-                    </div>
-                    <div class="code">
-                        <p>
-                            <span class="class">.heart</span> {<br> margin-top: 30px;<br> position: relative;<br> width: 100px;<br> height: 90px;<br> }
-                            <br>
-                            <br> <span class="class">.heart::before,
-                            <br> .heart::after</span> {<br> position: absolute;<br> content: "";<br> left: 84px;<br> top: 0;<br> width: 85px;<br> height: 125px;<br> background: rgb(243, 159, 204);<br> border-radius: 50px 50px 0 0;<br> transform: rotate(-45deg);<br>                            transform-origin: 0 100%;<br> } <br><br><span class="class">.heart:after</span> {<br> left: 0;<br> transform: rotate(45deg);<br> transform-origin: 100% 100%;<br> }
-
-                        </p>
-                    </div>
-                </div>
-                <p>Before these two converted rectangles are put together properly, the shape looks like this:
-                </p>
-                <div class="heart-parted graph"></div>
-            </div>
-
-        </li>
-    </ul>
-
-    <footer>
-        <p>&copy;Yanhan</p>
-    </footer>
-    <script src="js/button.js"></script>
-
+        </footer>
+        <script src="js/button.js"></script>
+    </div>
 </body>
 
 </html>

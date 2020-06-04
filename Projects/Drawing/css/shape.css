@@ -49,7 +49,7 @@ ul {
 p {
     font-size: 2rem;
     color: inherit;
-    margin: .75em 0;
+    padding: .75em 0;
 }
 
 p+div {
@@ -114,6 +114,43 @@ h2 {
 
 .main-header p {
     font-style: italic;
+}
+
+
+/* navigation */
+
+#main-nav {
+    margin: 10px auto 5px;
+    color: white;
+    overflow: hidden;
+    background-color: #d8bfd86b;
+    margin-top: 35px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    /* background-color: #d8bfd88c; */
+    float: left;
+    display: block;
+    padding: 14px 16px;
+}
+
+#main-nav a:first-child {
+    padding-left: 2rem;
+}
+
+#main-nav a:-webkit-any-link {
+    color: white;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.content {
+    padding: 16px;
 }
 
 
@@ -263,10 +300,10 @@ button {
 .heart-parted::after {
     position: absolute;
     content: "";
-    left: -38px;
+    left: -15px;
     top: 0;
-    width: 85px;
-    height: 125px;
+    width: 75px;
+    height: 101px;
     background: rgb(238, 185, 213);
     border-radius: 50px 50px 0 0;
     transform: rotate(-45deg);
@@ -280,16 +317,22 @@ button {
 }
 
 footer {
-    height: 6rem;
     background-color: thistle;
     padding: 10px 5%;
 }
 
-footer p:last-child {
-    padding-bottom: 20px;
+#footer-container {
+    width: 80%;
+    padding: .5em 0;
 }
 
 @media (min-width: 769px) {
+    #main-nav a {
+        font-size: 2.2rem;
+    }
+    #main-nav a:first-child {
+        padding-left: 5rem;
+    }
     .heart-parted::before,
     .heart-parted::after {
         left: 84px;
@@ -303,7 +346,7 @@ footer p:last-child {
         width: 45%;
         padding: 5%;
         overflow: scroll;
-        background-color: rgba(216, 191, 216, 0.18);
+        background-color: rgba(236, 221, 236, 0.08);
         border-radius: 5%;
     }
     .col {
@@ -340,5 +383,12 @@ footer p:last-child {
 @media (max-width: 414px) {
     #heart-container {
         padding-right: 25%;
+    }
+}
+
+@media (max-width: 479px) {
+    #main-nav a {
+        font-size: 2rem;
+        width: 100%;
     }
 }
