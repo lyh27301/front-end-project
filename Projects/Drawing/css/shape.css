@@ -76,7 +76,6 @@ p+div {
     display: block;
     height: 180px;
     padding: 5%;
-    overflow: scroll;
     border-radius: 5%;
 }
 
@@ -166,7 +165,7 @@ h2 {
 /* columns of different shapes */
 
 .col {
-    border: 3px solid #efe5ef;
+    border: 3px solid #efe5ef41;
     margin: 10px auto;
     height: auto;
     padding: 0;
@@ -357,56 +356,73 @@ footer {
         overflow: scroll;
         background-color: rgba(236, 221, 236, 0.08);
         border-radius: 5%;
+        -ms-overflow-style: none;
     }
-    .col {
-        float: left;
-        height: 70rem;
-        width: 48%;
-        margin-right: 2%;
-    }
-    .col:last-child {
-        margin-right: 0;
-    }
-    .col-content {
-        height: 60rem;
-        overflow: scroll;
-    }
-    .graph {
-        float: left;
-        margin-bottom: 10px;
-    }
-    .clearfix::after {
-        content: " ";
-        display: table;
-        clear: both;
+    .code::-webkit-scrollbar {
+        display: none;
     }
 }
 
+.col {
+    float: left;
+    height: 70rem;
+    width: 48%;
+    margin-right: 2%;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+.col-content {
+    height: 60rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+
+.col-content::-webkit-scrollbar {
+    display: none;
+}
+
+.graph {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+}
 @media (min-width: 945px) {
     .code {
         float: right;
         margin-right: 30px;
     }
 }
-
 @media (max-width: 414px) {
     #heart-container {
         padding-right: 25%;
     }
 }
-
 @media (max-width: 479px) {
     #main-nav a {
         font-size: 2rem;
         width: 100%;
     }
+    
     #main-header-container {
         padding: 25px 0;
     }
+    
     #main-header h1 {
         font-size: 2.8rem;
         line-height: normal;
     }
+    
     #main-header p {
         font-size: 1.8rem;
     }
