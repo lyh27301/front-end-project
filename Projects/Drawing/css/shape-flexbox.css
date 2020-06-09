@@ -208,8 +208,6 @@ h2 {
 .container {
     /* flex item properties */
     flex-grow: 1;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .col-content button {
@@ -220,9 +218,12 @@ h2 {
     /* flex container */
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .container .graph {
+    margin-bottom: 20px;
     /* flex item properties */
     width: 150px;
     height: 150px;
