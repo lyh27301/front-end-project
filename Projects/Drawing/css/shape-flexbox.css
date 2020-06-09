@@ -1,0 +1,452 @@
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf);
+    font-weight: lighter;
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    /* center all elements: inline-element; block-element */
+    text-align: center;
+    margin: 0 auto;
+}
+
+body {
+    color: white;
+    background: linear-gradient( rgba(255, 254, 255, 0.95), rgba(255, 254, 255, .99)), url(../img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center / cover;
+    font-family: 'Cormorant_Garamond', Arial, Helvetica, san-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 2%;
+}
+
+
+/* paragraphs */
+
+p {
+    font-size: 2rem;
+    color: inherit;
+    padding: .75em 0;
+}
+
+p+div {
+    margin: 30px auto;
+}
+
+.col-content {
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.col-content p {
+    color: #6e556e;
+    text-align: start;
+    line-height: 1.75em;
+}
+
+.code {
+    display: block;
+    padding: 5%;
+    height: 200px;
+    overflow: scroll;
+    background-color: rgba(236, 221, 236, 0.08);
+    border-radius: 5%;
+    -ms-overflow-style: none;
+}
+
+.code::-webkit-scrollbar {
+    display: none;
+}
+
+.col-content .code p .class {
+    font-weight: bold;
+    color: #a550b4b6;
+}
+
+
+/* headings */
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 4rem;
+    margin: 15px auto;
+    font-weight: normal;
+}
+
+h2 {
+    color: white;
+    background-color: thistle;
+    margin: 2px 2px 15px 2px;
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 7px 0;
+    text-transform: none;
+}
+
+.col h2 {
+    height: 5rem;
+}
+
+#main-header {
+    color: white;
+    letter-spacing: 1.5px;
+    background: linear-gradient( rgba(216, 191, 216, 0.78), rgba(216, 191, 216, 0.78)), url(../img/monika-grabkowska-tv-d1R3FItE-unsplash.jpg) no-repeat center;
+    margin-bottom: 35px;
+}
+
+#main-header-container {
+    max-width: 80%;
+    padding: 40px 0;
+}
+
+#main-header p {
+    font-style: italic;
+}
+
+
+/* navigation */
+
+#main-nav {
+    margin: 0 auto 5px;
+    color: white;
+    overflow: hidden;
+    background-color: #e6d3e6;
+    z-index: 99;
+    /* flex container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-nav a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    /* background-color: #d8bfd88c; */
+    display: block;
+    padding: 14px 16px;
+    /* flex item */
+    flex-basis: 170px;
+}
+
+#main-nav a:first-child {
+    padding-left: 2rem;
+}
+
+#main-nav a:-webkit-any-link {
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.content {
+    padding: 16px;
+}
+
+
+/* columns of different shapes */
+
+.shape-list {
+    /* flex container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col {
+    border: 3px solid #efe5ef41;
+    margin: 10px auto;
+    height: auto;
+    padding: 0;
+    /* flex item properties */
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+.col-content {
+    padding: 15px 8%;
+    height: auto;
+    margin-bottom: 3rem;
+    /* flex container */
+    display: flex;
+    flex-direction: column;
+}
+
+.col-content p,
+.container {
+    /* flex item properties */
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-content button {
+    align-self: center;
+}
+
+.container {
+    /* flex container */
+    display: flex;
+    flex-direction: row;
+}
+
+.container .graph {
+    /* flex item properties */
+    width: 150px;
+    height: 150px;
+    flex-basis: 150px;
+    align-self: center;
+}
+
+.container .code {
+    /* flex item properties */
+    flex-basis: 180px;
+}
+
+
+/* triangle */
+
+.triangle {
+    height: 0;
+    width: 0;
+    margin-top: 20px;
+    border-bottom: 80px solid rgb(231, 203, 231);
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+}
+
+.four-triangle {
+    border: 80px solid;
+    border-color: rgb(235, 185, 231) rgb(186, 157, 201) rgb(231, 203, 231) rgb(207, 188, 240);
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+.graph {
+    margin-bottom: 20px;
+}
+
+
+/* Circle & Oval */
+
+.circle {
+    height: 15rem;
+    width: 15rem;
+    background-color: #cfb3cf;
+    border-radius: 50%;
+}
+
+.oval {
+    height: 24rem;
+    width: 12rem;
+    background-color: #f0daf0;
+    border-radius: 50%;
+}
+
+
+/* 6 point star */
+
+.star-six {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid #e1d5f1;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.star-six::after {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 100px solid #e1d5f1;
+    content: "";
+    top: 30px;
+    left: -60px;
+    position: absolute;
+}
+
+
+/* buttons */
+
+button {
+    background-color: thistle;
+    border: 2px solid thistle;
+    border-radius: 10%;
+    font-size: 14px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: solid;
+    color: white;
+    margin: 0 10px;
+}
+
+
+/* heart */
+
+.heart {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: "";
+    left: 84px;
+    top: 0;
+    width: 85px;
+    height: 125px;
+    background: rgb(238, 185, 213);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.heart-parted {
+    margin-top: 30px;
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+.heart-parted::before,
+.heart-parted::after {
+    position: absolute;
+    content: "";
+    left: -15px;
+    top: 0;
+    width: 75px;
+    height: 101px;
+    background: rgb(238, 185, 213);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart-parted:after {
+    left: 36px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+footer {
+    background-color: thistle;
+    padding: 10px 5%;
+}
+
+#footer-container {
+    width: 80%;
+    padding: .5em 0;
+}
+
+@media (min-width: 1100px) {
+    .col {
+        flex-basis: 500px;
+    }
+}
+
+@media (min-width: 769px) {
+    #main-nav a {
+        font-size: 2.2rem;
+    }
+    #main-nav a:first-child {
+        padding-left: 5rem;
+    }
+    #heart-parted-container {
+        position: relative;
+        left: -100px;
+    }
+    #heart-container {
+        position: relative;
+        left: -30px;
+    }
+    .heart-parted::before,
+    .heart-parted::after {
+        left: 84px;
+    }
+    .heart-parted:after {
+        left: 136px;
+    }
+    .col {
+        height: 70rem;
+        margin-right: 2%;
+    }
+    .col-content {
+        height: 60rem;
+        overflow: scroll;
+        -ms-overflow-style: none;
+    }
+    .col-content::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 414px) {
+    #heart-container {
+        padding-right: 25%;
+    }
+}
+
+@media (max-width: 479px) {
+    #main-nav a {
+        font-size: 2rem;
+        width: 100%;
+    }
+    #main-header-container {
+        padding: 25px 0;
+    }
+    #main-header h1 {
+        font-size: 2.8rem;
+        line-height: normal;
+    }
+    #main-header p {
+        font-size: 1.8rem;
+    }
+}
